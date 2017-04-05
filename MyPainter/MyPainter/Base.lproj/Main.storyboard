@@ -1,14 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A2323a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +18,73 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gQB-Bh-lM5" customClass="PaintView">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="N8U-Q7-6zd">
+                                <frame key="frameInset" minX="114" minY="26" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CcN-y5-2RD">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="naL-2z-Seg"/>
+                                    <constraint firstAttribute="height" constant="40" id="w2p-rw-ycy"/>
+                                </constraints>
+                                <state key="normal" title="回退">
+                                    <color key="titleColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="goBack:" destination="BYZ-38-t0r" eventType="touchUpInside" id="efg-Ey-E7D"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Sr-Kq-cdQ">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="4Rr-ds-QD6"/>
+                                    <constraint firstAttribute="width" constant="40" id="PnK-sw-Xmi"/>
+                                </constraints>
+                                <state key="normal" title="保存">
+                                    <color key="titleColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="save:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xnf-oZ-q12"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vpg-FJ-1YU">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="7LF-wu-vLC"/>
+                                    <constraint firstAttribute="height" constant="40" id="QO5-P1-uAT"/>
+                                </constraints>
+                                <state key="normal" title="清屏">
+                                    <color key="titleColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearScreen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OyT-uf-Bp8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gQB-Bh-lM5" secondAttribute="bottom" constant="200" id="5b4-90-0F3"/>
+                            <constraint firstItem="Vpg-FJ-1YU" firstAttribute="top" secondItem="CcN-y5-2RD" secondAttribute="top" id="A7F-6L-eN1"/>
+                            <constraint firstItem="2Sr-Kq-cdQ" firstAttribute="top" secondItem="CcN-y5-2RD" secondAttribute="top" id="BoS-C2-3dj"/>
+                            <constraint firstItem="Vpg-FJ-1YU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="FPq-F6-3JF"/>
+                            <constraint firstItem="gQB-Bh-lM5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="IdA-yx-njD"/>
+                            <constraint firstItem="CcN-y5-2RD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Kag-EG-S4a"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2Sr-Kq-cdQ" secondAttribute="trailing" constant="30" id="LNl-qZ-Xrj"/>
+                            <constraint firstItem="gQB-Bh-lM5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="90" id="MHO-pd-cql"/>
+                            <constraint firstItem="Vpg-FJ-1YU" firstAttribute="bottom" secondItem="CcN-y5-2RD" secondAttribute="bottom" id="hoq-kw-UNS"/>
+                            <constraint firstAttribute="trailing" secondItem="gQB-Bh-lM5" secondAttribute="trailing" constant="15" id="lGA-TH-tOQ"/>
+                            <constraint firstItem="CcN-y5-2RD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="25" id="zxy-0C-tSt"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="paintView" destination="gQB-Bh-lM5" id="xg7-h9-Id4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="125.4872563718141"/>
         </scene>
     </scenes>
 </document>

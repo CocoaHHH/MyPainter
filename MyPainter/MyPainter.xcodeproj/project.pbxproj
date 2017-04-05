@@ -15,6 +15,8 @@
 		52B65A141E94EBC2008E20B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B65A121E94EBC2008E20B2 /* LaunchScreen.storyboard */; };
 		52B65A1F1E94EBC2008E20B2 /* MyPainterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B65A1E1E94EBC2008E20B2 /* MyPainterTests.m */; };
 		52B65A2A1E94EBC2008E20B2 /* MyPainterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B65A291E94EBC2008E20B2 /* MyPainterUITests.m */; };
+		52B65A391E94F265008E20B2 /* PaintView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B65A381E94F265008E20B2 /* PaintView.m */; };
+		52B65A3C1E94FFE2008E20B2 /* UIImage+screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B65A3B1E94FFE2008E20B2 /* UIImage+screenshot.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		52B65A251E94EBC2008E20B2 /* MyPainterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyPainterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B65A291E94EBC2008E20B2 /* MyPainterUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyPainterUITests.m; sourceTree = "<group>"; };
 		52B65A2B1E94EBC2008E20B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52B65A371E94F265008E20B2 /* PaintView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaintView.h; sourceTree = "<group>"; };
+		52B65A381E94F265008E20B2 /* PaintView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaintView.m; sourceTree = "<group>"; };
+		52B65A3A1E94FFE2008E20B2 /* UIImage+screenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+screenshot.h"; sourceTree = "<group>"; };
+		52B65A3B1E94FFE2008E20B2 /* UIImage+screenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+screenshot.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,10 @@
 				52B65A081E94EBC2008E20B2 /* AppDelegate.m */,
 				52B65A0A1E94EBC2008E20B2 /* ViewController.h */,
 				52B65A0B1E94EBC2008E20B2 /* ViewController.m */,
+				52B65A371E94F265008E20B2 /* PaintView.h */,
+				52B65A381E94F265008E20B2 /* PaintView.m */,
+				52B65A3A1E94FFE2008E20B2 /* UIImage+screenshot.h */,
+				52B65A3B1E94FFE2008E20B2 /* UIImage+screenshot.m */,
 				52B65A0D1E94EBC2008E20B2 /* Main.storyboard */,
 				52B65A101E94EBC2008E20B2 /* Assets.xcassets */,
 				52B65A121E94EBC2008E20B2 /* LaunchScreen.storyboard */,
@@ -274,6 +284,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				52B65A0C1E94EBC2008E20B2 /* ViewController.m in Sources */,
+				52B65A3C1E94FFE2008E20B2 /* UIImage+screenshot.m in Sources */,
+				52B65A391E94F265008E20B2 /* PaintView.m in Sources */,
 				52B65A091E94EBC2008E20B2 /* AppDelegate.m in Sources */,
 				52B65A061E94EBC2008E20B2 /* main.m in Sources */,
 			);

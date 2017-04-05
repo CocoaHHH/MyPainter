@@ -7,8 +7,9 @@
 //
 
 #import "ViewController.h"
-
+#import "PaintView.h"
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet PaintView *paintView;
 
 @end
 
@@ -16,9 +17,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+}
+- (IBAction)goBack:(UIButton *)sender {
+    [self.paintView goBack];
+}
+- (IBAction)save:(UIButton *)sender {
+    [self.paintView save];
 }
 
+- (IBAction)clearScreen:(UIButton *)sender {
+    [self.paintView removeAllLines];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
